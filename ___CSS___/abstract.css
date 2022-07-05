@@ -1,0 +1,66 @@
+html#a {
+    padding-top: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+body#a {
+    /* background-image: url("https://source.unsplash.com/2000x2000/?abstract,dark"); */
+    background-color: aqua;
+}
+div#a {
+    background-color: rgb(255, 255, 255);
+    border-radius: 40px;
+    border-color: black;
+    border-style: solid;
+    border-width: 5px;
+    padding: 20px;
+    margin: 20px;
+    position: fixed;
+    top: 51%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    height: 520px;
+    width: 600px;
+}
+
+a#b {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+    border-color: black;
+    border-style: solid;
+    border-width: 5px;
+
+    
+}
+
+div#b {
+    position: fixed;
+    top: 20%;
+    left: 51%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+div#c {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+    border-color: black;
+    border-width: 5px;
+    border-style: solid;
+    width: 40%;
+
+    align-items: center;
+    position: fixed;
+    top: 10%;
+    left: 51%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
