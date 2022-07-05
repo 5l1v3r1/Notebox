@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, redirect
 from threading import Thread
 from time import sleep
 from SimplifyPython import scrypto
@@ -13,18 +13,31 @@ def generate_id(data):
     return id
 
 def new(data):
-    with open("database.json", "r") as f:
+    with open("data.json", "r") as f:
         database = json.load(f)
 
     id = generate_id(database)
 
-    key = scrypto.generate_key(data['password'], data['title'])
+    key = scrypto.generate_key(data['password'], data['title'].encode())
 
-    enc_title = scrypto.encrypt(key, data['title'])
+    enc_title = scrypto.encrypt(key, data['title']).decode()
 
-    enc_text = scrypto.encrypt(key, data['text'])
+    enc_text = scrypto.encrypt(key, data['text']).decode()
 
-    
+    del key
+
+    id = generate_id(database)
+
+    database[id] = {}
+
+    database[id]['title'] = enc_title
+
+    database[id]['text'] = enc_text
+
+    with open('data.json', 'w') as outfile:
+        json.dump(database, outfile, indent = 4)
+
+    return id
     
     
         
@@ -37,8 +50,8 @@ def server():
     
     @app.route("/r", methods=['POST'])
     def user():
-        new(request.form)
-        return f"!"
+        id = new(request.form)
+        return redirect("https://necrownyx.github.io/Notebox/" + id)
     
     app.run(host='0.0.0.0', port=8080)
 
