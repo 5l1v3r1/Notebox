@@ -22,34 +22,40 @@
 <!-- Navigation Bar -->
 <div id="b">
   <div>
-    <a href="index.html" class="w3-bar-item w3-button w3-padding-large" id="b">Home</a>
+    <a href="../index.html" class="w3-bar-item w3-button w3-padding-large" id="b">Home</a>
     <a href="about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small" id="b">About</a>
     <a href="contact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small" id="b">Contact</a>
-    <a href="Retrive/index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small" id="b">Retrive</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small" id="b">Retrive</a>
   </div>
 </div>
-
 <!-- Main Page Content -->
 <div id="a">
-    <form action="https://Notebox.necrownyx.repl.co/r" method="post">
+    <p align="center" id="title">If you had an id in the url it would be shown here!</p>
+    <br>
+    <form action="https://Notebox.necrownyx.repl.co/g" method="post">
         <div>
             <div class="w3-half">
-                <label>Title</label>
-                <input class="w3-input w3-border" type="text" name="title" placeholder="Title Here" required>
+                <label>ID</label>
+                <input class="w3-input w3-border" type="text" id="title" name="id" placeholder="ID Here" required>
             </div>
             <div class="w3-half">
                 <label>Password</label>
                 <input class="w3-input w3-border" type="password" name="password" placeholder="Password Here" required>
             </div>
-        </div>
-        <div>
-            <div class="w3-full">
-                <textarea name="text" rows="15" cols="58" placeholder="Put Message Content Here"></textarea>
-            </div>
-        </div>
         <div align="center">
             <button class="w3-button w3-black w3-section"  type="submit">Login</button>
         </div>
 </div>
+<script>
+    // Gets the data from the page url
+    var url = window.location.href;
+    var params = url.split('?')[1];
+    
+    // Display the data
+    if (params != null) {
+        document.getElementById("title").innerHTML = "Your id is <mark>(" + params + ")</mark> make sure you remember it as it is needed to retrive the message in future!";
+    }
+    
+</script>
 </body>
 </html>

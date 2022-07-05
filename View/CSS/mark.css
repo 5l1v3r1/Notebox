@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2&display=swap');
+
+p, h1, h2, h3, h4, h5, h6, li, th, td {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9em;
+}
+
+h1, h2 {
+    font-family: 'Baloo Da 2', cursive;
+    padding: 3px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+h6 {
+    font-size: 0.8em;
+    color: rgba(206, 206, 206, 0.89);
+}
+
+div#sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+figure#right {
+    float: right;
+    margin: 0 0 0 1em;
+    width: fit-content;
+}
+
+

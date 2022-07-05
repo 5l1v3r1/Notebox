@@ -22,16 +22,36 @@
 <!-- Navigation Bar -->
 <div id="b">
   <div>
-    <a href="index.html" class="w3-bar-item w3-button w3-padding-large" id="b">Home</a>
+    <a href="../index.html" class="w3-bar-item w3-button w3-padding-large" id="b">Home</a>
     <a href="about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small" id="b">About</a>
     <a href="contact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small" id="b">Contact</a>
-    <a href="login.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small" id="b">Retrive</a>
+    <a href="../Retrive/index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small" id="b">Retrive</a>
   </div>
 </div>
-
 <!-- Main Page Content -->
 <div id="a">
+    <h3 id="title" align="center">If you had data in the url the title would he here</h1>
+    <br>
+    <p id="text" align="center">If you had data in the url the text would he here</p>
     
 </div>
+<script>
+    // Gets the data from the page url
+    var url = window.location.href;
+    var params = url.split('?')[1];
+
+    //title
+    var title = params.split('&')[0].split('=')[1];
+
+    //text
+    var text = params.split('&')[1].split('=')[1];
+    
+    // Display the data
+    if (params != null) {
+        document.getElementById("title").innerHTML = title;
+        document.getElementById("text").innerHTML = text;
+    }
+    
+</script>
 </body>
 </html>
