@@ -77,6 +77,10 @@ def retrive(data):
 def server():
         
     app = Flask(__name__)
+
+    @app.route('/', methods=['HEAD'])
+    def keep_alive():
+        return 'Pong'
     
     @app.route("/r", methods=['POST'])
     def index():
