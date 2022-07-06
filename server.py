@@ -85,12 +85,12 @@ def server():
     @app.route("/r", methods=['POST'])
     def index():
         id = new(request.form)
-        return redirect("https://necrownyx.github.io/Notebox/Retrive/index.html?" + id)
+        return redirect("https://rerum-crea.github.io/Notebox/Retrive/index.html?" + id)
 
     @app.route("/g", methods=['POST'])
     def user():
         id = retrive(request.form)
-        return redirect("https://necrownyx.github.io/Notebox/View/index.html?" + id)
+        return redirect("https://rerum-crea.github.io/Notebox/View/index.html?" + id)
         
     
     app.run(host='0.0.0.0', port=8080)

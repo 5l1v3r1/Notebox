@@ -9,4 +9,4 @@ Notebox is a simple to use web application that allows you to create and share e
 
 ## Usage
 
-To use Notebox, visit the [homepage](https://necrownyx.github.io/Notebox/).
+To use Notebox, visit the [homepage](https://rerum-crea.github.io/Notebox/).
