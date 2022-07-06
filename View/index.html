@@ -45,6 +45,7 @@
 
     //text
     var text = params.split('&')[1].split('=')[1];
+    var text = text.replace(/%20/g, " ");
     
     // Display the data
     if (params != null) {
